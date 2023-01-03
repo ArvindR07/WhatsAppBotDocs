@@ -19,10 +19,16 @@ To create a new setup, run the below script.
 An installer will appear which will guide you through the setup process. 
 It is **highly recommended** to watch `this <https://www.youtube.com/>`_ video on how to setup. 
 
-After setting up, use the setup name you entered during the setup process to create an instance.
-
 .. image:: setup.png
    :width: 600
+
+After setting up, use the setup name you entered during the setup process to create an instance.
+
+.. code:: python
+   
+   from WhatsAppBot import *
+   
+   WTBot = WhatsAppBot('setup name you entered')
 
 Functions
 =======================
