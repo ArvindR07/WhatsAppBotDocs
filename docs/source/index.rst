@@ -8,11 +8,18 @@ Welcome to WhatsApp Bot's documentation!
 Creating an instance
 =======================
 
+To create a new setup, run the below script.
+
 .. code:: python
    
    from WhatsAppBot import *
    
-   WTBot = WhatsAppBot()
+   WTBot = WhatsAppBot('create a new setup')
+
+This will display a 
+For more information, it is recommended to watch `Link text <https://www.youtube.com/>` video 
+
+
 
 Functions
 =======================
