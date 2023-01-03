@@ -1,7 +1,7 @@
 Welcome to WhatsAppBot's documentation!
 ========================================
 
-**WhatsAppBot** is a Python package to automate the process of sending and replying to WhatsApp messages.
+**WhatsAppBot** is a Python package to automate the process of sending and replying to WhatsApp messages. It uses pyautogui to acheive clicking of mouse events, type messages, select and copy messages, etc.
 
 .. default-role:: code
 
@@ -37,8 +37,9 @@ Functions
 newMessagesThere()
 =============================
 
+Function Description and Working:
 This Functions returns a boolean value (True or False).
-If there are new messages (unread messages), it returns True.
+If there are new messages (unread messages), it returns True, otherwise False.
 It uses the red color notification dot on WhatsApp icon to acheive this.
 So this function is available only for WhatsApp Desktop Application in Windows and Mac, and not for WhatsApp Web.
 
@@ -55,6 +56,36 @@ Returns:
    >> True
    >> False
 
+
+=============================
+getNewMessages()
+=============================
+
+Function Description and Working:
+It opens WhatsApp and turns on the unread chat filter. It then opens chats under the filter one by one untill there is nothing left. For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down. It then opens contact info (or group info) to copy information about the sender
+
+Sample call:
+
+.. code:: python
+
+   WBinstance.Function_1(arg1, arg2)
+
+Arguments
+
+.. code:: python
+   
+   arg1 - 
+   arg2 - 
+
+Return Value
+
+.. code:: python
+   
+   [[val1, val2, val3]]
+   
+   val1 - 
+   val2 - 
+   val3 -
 
 =============================
 Function_1
