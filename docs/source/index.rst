@@ -21,6 +21,9 @@ It is **highly recommended** to watch `this <https://www.youtube.com/>`_ video o
 
 After setting up, use the setup name you entered during the setup process to create an instance.
 
+.. image:: setup.png
+   :width: 600
+
 Functions
 =======================
 
