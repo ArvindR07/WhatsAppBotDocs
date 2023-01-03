@@ -19,11 +19,11 @@ Sample call:
 .. code:: python
 
    WBinstance.Function_1(arg1, arg2)
+
 Arguments
 
 .. code:: python
-   arg1 - ...
-   arg2 - ...
+   print(x)
 
 Return Value
 
