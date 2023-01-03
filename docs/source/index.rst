@@ -5,6 +5,15 @@ Welcome to WhatsApp Bot's documentation!
 
 .. default-role:: code
 
+Creating an instance
+=======================
+
+.. code:: python
+   
+   from WhatsAppBot import *
+   
+   WTBot = WhatsAppBot()
+
 Functions
 =======================
 
@@ -18,7 +27,7 @@ Sample call:
 
 .. code:: python
 
-   WBotInstance.Function_1(arg1, arg2)
+   WBinstance.Function_1(arg1, arg2)
 
 Arguments
 
