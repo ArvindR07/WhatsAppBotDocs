@@ -19,16 +19,15 @@ Sample call:
 .. code:: python
 
    WBinstance.Function_1(arg1, arg2)
+Arguments
 
-Arguments:
-
-# .. code:: python
+.. code:: python
    arg1 - ...
    arg2 - ...
 
-Return Value:
+Return Value
 
-# .. code:: python
+.. code:: python
    [[val1, val2, val3]]
    
    val1 - 
