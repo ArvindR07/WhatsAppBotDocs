@@ -79,11 +79,10 @@ Returns:
 
 .. code:: python
    
-   [[val1, val2, val3]]
-   
-   val1 - 
-   val2 - 
-   val3 -
+   [
+      ["Group Chat", group_name, [date_time_string, user_name, phone_number, msg]],
+      ["Personal Chat", user_name, phone_number, [date_time_string, msg]], ...
+   ]
 
 =============================
 Function_1
