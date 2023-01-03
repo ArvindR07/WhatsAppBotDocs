@@ -34,6 +34,26 @@ Functions
 =======================
 
 =============================
+newMessagesThere()
+=============================
+
+This Functions returns a boolean value (True or False). If there are new messages (unread messages), it returns True. It uses the red color notification dot on WhatsApp icon to acheive this. So this function is available only for WhatsApp Desktop Application in Windows and Mac, and not for WhatsApp Web.
+
+Usage:
+
+.. code:: python
+
+   WTBot.newMessagesThere()
+
+Returns:
+
+.. code:: python
+   
+   >> True
+   >> False
+
+
+=============================
 Function_1
 =============================
 
