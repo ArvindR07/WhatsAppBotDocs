@@ -1,8 +1,7 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to WhatsApp Bot's documentation!
+========================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
+**WhatsAppBot** (/lu'make/) is a Python library to automate the functions of the WhatsApp application.
 It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
 and offers a *simple* and *intuitive* API.
 
@@ -13,10 +12,10 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-Contents
---------
+Function Descriptions
+---------------------
 
-.. toctree::
-
-   usage
-   api
+.. FunA::
+   helloaksjdaks;djaskdjaskldjaskldjasdaslkdjalksdjklasjdsakldjalskdjaskldjaskldjaskjd
+   aslkdjaslkdjalskdjsalkdjsalkdjaskldjaslkdjaslkdjaslkdjaslkdjaslkdjskladjkasljdkasld
+   
