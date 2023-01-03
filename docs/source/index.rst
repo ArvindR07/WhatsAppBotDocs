@@ -1,7 +1,7 @@
 Welcome to WhatsApp Bot's documentation!
 ========================================
 
-**WhatsAppBot** (/lu'make/) is a Python library to automate the functions of the WhatsApp application.
+**WhatsAppBot** is a Python library to automate the functions of the WhatsApp application.
 
 .. default-role:: code
 
@@ -18,7 +18,7 @@ Sample call:
 
 .. code:: python
 
-   WBinstance.Function_1(arg1, arg2)
+   WBotInstance.Function_1(arg1, arg2)
 
 Arguments
 
