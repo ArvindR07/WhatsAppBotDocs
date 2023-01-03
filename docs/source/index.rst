@@ -38,6 +38,7 @@ newMessagesThere()
 =============================
 
 Function Description and Working:
+
 This Functions returns a boolean value (True or False).
 If there are new messages (unread messages), it returns True, otherwise False.
 It uses the red color notification dot on WhatsApp icon to acheive this.
@@ -53,7 +54,10 @@ Returns:
 
 .. code:: python
    
+   # if there are unread messages yet to be opened
    >> True
+   
+   # if all messages are read and there is no new message
    >> False
 
 
