@@ -75,13 +75,43 @@ Usage:
 
    WTBot.getNewMessages()
 
-Returns:
+Return Template:
 
 .. code:: python
    
    [
       ["Group Chat", group_name, [date_time_string, user_name, phone_number, msg]],
-      ["Personal Chat", user_name, phone_number, [date_time_string, msg]], ...
+      ["Personal Chat", user_name, phone_number, [date_time_string, msg]],
+      ...,
+      ...
+   ]
+
+It returns a list of new messages clubbed together with the chat.
+Must make it clear it is list of messages, give example. 
+Above it template.
+Order may be different, check...
+
+Return Example:
+
+.. code:: python
+   
+   [
+      ["Group Chat", 'Sample Group 1', 
+         [
+            ['2023-01-01 15:30', 'nanda', '+91 99524 02150', 'Hi I am Nanda'],
+            ['2023-01-01 15:31', 'niresh', '+91 99524 02623', 'Hi I am Niresh'],
+            ['2023-01-01 15:34', 'nanda', '+91 99524 02150', 'Good Morning']
+         ]
+      ],
+      ["Personal Chat", 'nanda', '+91 99524 02150', 
+         [
+            ['2023-01-01 15:30', 'Where are you?'],
+            ['2023-01-01 15:31', 'Have you reached home?'],
+            ['2023-01-01 15:31', 'Call me back']
+         ]
+      ],
+      ...,
+      ...
    ]
 
 =============================
