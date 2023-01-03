@@ -16,7 +16,7 @@ To create a new setup, run the below script.
    
    WTBot = WhatsAppBot('create a new setup')
 
-This will display a 
+This will display a setup. 
 For more information, it is recommended to watch `this <https://www.youtube.com/>`_ video 
 
 
