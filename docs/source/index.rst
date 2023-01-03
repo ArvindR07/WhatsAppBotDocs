@@ -5,7 +5,7 @@ Welcome to WhatsAppBot's documentation!
 
 .. default-role:: code
 
-Creating an instance
+Creating an instance using constructor
 =======================
 
 To create a new setup, run the below script.
@@ -66,22 +66,16 @@ getNewMessages()
 =============================
 
 Function Description and Working:
-It opens WhatsApp and turns on the unread chat filter. It then opens chats under the filter one by one untill there is nothing left. For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down. It then opens contact info (or group info) to copy information about the sender
 
-Sample call:
+It opens WhatsApp and turns on the unread chat filter. It then opens chats under the filter one by one untill there is nothing left. For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down. It then opens contact info (or group info) to copy information about the sender. It closes the contact info and selects messages. It copies it to the clipboard and parses it discard previously read messages and returns the new messages in the below format. After reading all messages it minimizes WhatsApp.
 
-.. code:: python
-
-   WBinstance.Function_1(arg1, arg2)
-
-Arguments
+Usage:
 
 .. code:: python
-   
-   arg1 - 
-   arg2 - 
 
-Return Value
+   WTBot.getNewMessages()
+
+Returns:
 
 .. code:: python
    
