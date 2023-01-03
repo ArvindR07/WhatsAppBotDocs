@@ -2,22 +2,35 @@ Welcome to WhatsApp Bot's documentation!
 ========================================
 
 **WhatsAppBot** (/lu'make/) is a Python library to automate the functions of the WhatsApp application.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+.. default-role:: code
 
-.. note::
+=======================
+Functions
+=======================
 
-   This project is under active development.
+Function_1
+=============================
 
-Function Descriptions
----------------------
+The given function does this....
 
-.. FunA::
+Sample call:
 
-   Description:
-      Hello
+.. code:: python
+
+   WBinstance.Function_1(arg1, arg2)
+
+Arguments:
+
+.. code::
+   arg1 - ...
+   arg2 - ...
+
+Return Value:
+
+.. code::
+   [[val1, val2, val3]]
    
-   
+   val1 - 
+   val2 - 
+   val3 -
