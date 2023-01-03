@@ -5,10 +5,10 @@ Welcome to WhatsApp Bot's documentation!
 
 .. default-role:: code
 
-=======================
 Functions
 =======================
 
+=============================
 Function_1
 =============================
 
