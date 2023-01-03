@@ -1,4 +1,4 @@
-Welcome to WhatsApp Bot's documentation!
+Welcome to WhatsAppBot's documentation!
 ========================================
 
 **WhatsAppBot** is a Python library to automate the functions of the WhatsApp application.
