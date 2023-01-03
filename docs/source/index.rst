@@ -17,7 +17,7 @@ Function Descriptions
 
 .. FunA::
 
-Description:
-   Hello
+   Description:
+      Hello
    
    
