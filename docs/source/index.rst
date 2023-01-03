@@ -22,13 +22,13 @@ Sample call:
 
 Arguments:
 
-.. code:: python
+# .. code:: python
    arg1 - ...
    arg2 - ...
 
 Return Value:
 
-.. code:: python
+# .. code:: python
    [[val1, val2, val3]]
    
    val1 - 
