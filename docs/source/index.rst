@@ -16,6 +16,8 @@ Function Descriptions
 ---------------------
 
 .. FunA::
-   helloaksjdaks;djaskdjaskldjaskldjasdaslkdjalksdjklasjdsakldjalskdjaskldjaskldjaskjd
-   aslkdjaslkdjalskdjsalkdjsalkdjaskldjaslkdjaslkdjaslkdjaslkdjaslkdjskladjkasljdkasld
+
+Description:
+   Hello
+   
    
