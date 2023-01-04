@@ -162,9 +162,9 @@ Example:
 
 .. code:: python
    
-   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = '+91 99524 02150', message_type = 'Text', text = 'hello how are you')
-   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = 'Nanda', message_type = 'Text', text = 'hello how are you')
-   WTBot.sendMessage(personal_or_grp = 'Group Chat', message_to = 'Group Name', message_type = 'Image', image = 'C:\Users\nanda\Downloads\dhoni.jpeg')
+   WTBot.sendMessage(personal_or_grp='Personal Chat', message_to='+91 99524 02150', message_type='Text', text='hello how are you')
+   WTBot.sendMessage(personal_or_grp='Personal Chat', message_to='Nanda', message_type='Text', text='hello how are you')
+   WTBot.sendMessage(personal_or_grp='Group Chat', message_to='Group Name', message_type='Image', image=r'C:\Users\nanda\Downloads\dhoni.jpeg')
    
 
 =============================
@@ -214,7 +214,7 @@ Example:
                                                            ]
                         ],
                         ['Group Chat','Sample Group 1',[
-                                                         ['Image','C:\Users\nanda\Downloads\dhoni.jpeg'],
+                                                         ['Image','C:\\Users\\nanda\\Downloads\\dhoni.jpeg'],
                                                          ['Text','How is it?']
                                                        ]
                         ]
