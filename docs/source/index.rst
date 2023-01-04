@@ -34,7 +34,7 @@ Functions
 =======================
 
 =============================
-newMessagesThere()
+newMessagesThere(self)
 =============================
 
 Function Description and Working:
@@ -62,7 +62,7 @@ Returns:
 
 
 =============================
-getNewMessages()
+getNewMessages(self)
 =============================
 
 Function Description and Working:
@@ -115,30 +115,49 @@ Return Example:
    ]
 
 =============================
-Function_1
+sendMessage(self, personal_or_grp, message_to, message_type, text, image_location)
 =============================
 
-The given function does this....
+This function opens WhatsApp, searches **message_to** and opens it. It it then sends text or image as specified.
 
-Sample call:
-
-.. code:: python
-
-   WBinstance.Function_1(arg1, arg2)
-
-Arguments
+Usage:
 
 .. code:: python
-   
-   arg1 - 
-   arg2 - 
 
-Return Value
+   WTBot.sendMessage(personal_or_grp, message_to, message_type, text, image_location)
+
+Arguments:
 
 .. code:: python
    
-   [[val1, val2, val3]]
+   # It specifies whether message_to is a group chat or personal chat
+   personal_or_grp = 'Personal Chat' or 'Group Chat' 
    
-   val1 - 
-   val2 - 
-   val3 -
+   # message_to is a string
+   if personal_or_grp is 'Personal Chat':
+      # message_to can be contact name of the personal chat
+      # or phone number of the personal chat as string   
+   else if personal_or_grp is 'Group Chat':
+      # message_to is the name of group
+   
+   # message_type indicates whether type of message to send is either Image or Text
+   message_type = 'Text' or 'Image'
+   
+   if message_type = 'Text':
+      # text argument contains the text to send as string
+   else if message_type = 'Image':
+      # Image argument contains the path to image loaction as string
+      
+      # Windows supports all types of image format
+      # In Mac, you can only send images in jpeg format
+      # In other platforms, sending image is not possible, while you can still send text messages
+   
+Example:
+
+.. code:: python
+   
+   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = '+91 99524 02150', message_type = 'text', text = 'hello how are you')
+   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = 'Nanda', message_type = 'text', text = 'hello how are you')
+   WTBot.sendMessage(personal_or_grp = 'Group Chat', message_to = 'Group Name', message_type = 'Image', image = 'C:\Users\nanda\Downloads\dhoni.jpeg')
+   
+
