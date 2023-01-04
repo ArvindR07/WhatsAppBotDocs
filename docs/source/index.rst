@@ -136,7 +136,13 @@ Arguments:
    # message_to is a string
    if personal_or_grp is 'Personal Chat':
       # message_to can be contact name of the personal chat
-      # or phone number of the personal chat as string   
+      # or phone number of the personal chat as string
+      
+      # contact name and phone number must be exactly same as it is in contact info of whatsapp
+      # '9952402150' -> wrong
+      # '+91 99524 02150' -> correct
+      # '6374681767' -> wrong
+      # '+91 6374 681 767' -> correct
    else if personal_or_grp is 'Group Chat':
       # message_to is the name of group
    
