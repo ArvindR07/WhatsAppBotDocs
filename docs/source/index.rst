@@ -219,3 +219,9 @@ Example:
                                                        ]
                         ]
                      ]
+
+=============================
+getPreviousMessages(self, count=100, personal_or_grp=None, ph_no_or_name=None, message_type='Both',
+                            start_date_time='1970-01-01 00:00', end_date_time='3000-01-01 00:00')
+=============================
+
