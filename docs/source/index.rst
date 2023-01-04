@@ -156,8 +156,60 @@ Example:
 
 .. code:: python
    
-   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = '+91 99524 02150', message_type = 'text', text = 'hello how are you')
-   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = 'Nanda', message_type = 'text', text = 'hello how are you')
+   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = '+91 99524 02150', message_type = 'Text', text = 'hello how are you')
+   WTBot.sendMessage(personal_or_grp = 'Personal Chat', message_to = 'Nanda', message_type = 'Text', text = 'hello how are you')
    WTBot.sendMessage(personal_or_grp = 'Group Chat', message_to = 'Group Name', message_type = 'Image', image = 'C:\Users\nanda\Downloads\dhoni.jpeg')
    
 
+=============================
+sendMultipleMessages(self, list_of_replies):
+=============================
+
+This function does the same as functionality as sendMessage, but is highly optimised when sending multiple messages. You can buffer the send operations, and give it to this function as a list.
+
+Usage:
+
+.. code:: python
+
+   WTBot.sendMultipleMessages(list_of_replies)
+
+Arguments:
+
+.. code:: python
+   
+   # list_of_replies is in the below format
+   list_of_replies = [
+                        ['Personal Chat',ph_no_or_name,[
+                                                         [msg1_type,msg1],
+                                                         [msg2_type,msg2],
+                                                         [msg3_type,msg3],
+                                                         .....
+                                                        ]
+                        ],
+                        ['Group Chat',group_name,[
+                                                   ['Image',img_location],
+                                                   ['Text',text_msg]
+                                                  ]
+                        ],
+                        [....],
+                        [....],
+                        ...
+                     ]
+   
+Example:
+
+.. code:: python
+   
+   # list_of_replies is in the below format
+   list_of_replies = [
+                        ['Personal Chat','+91 99524 02150',[
+                                                            ['Text','Hi'],
+                                                            ['Text','Hello']
+                                                           ]
+                        ],
+                        ['Group Chat','Sample Group 1',[
+                                                         ['Image','C:\Users\nanda\Downloads\dhoni.jpeg'],
+                                                         ['Text','How is it?']
+                                                       ]
+                        ]
+                     ]
