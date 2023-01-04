@@ -1,7 +1,7 @@
 Welcome to WhatsAppBot's documentation!
 ========================================
 
-**WhatsAppBot** is a Python package to automate the process of sending and replying to WhatsApp messages. It uses pyautogui to acheive clicking of mouse events, type messages, select and copy messages, etc.
+**WhatsAppBot** is a Python package to automate the process of sending and replying to WhatsApp messages. It uses PyAutoGUI to acheive clicking of mouse events, type messages, select and copy messages, etc.
 
 .. default-role:: code
 
