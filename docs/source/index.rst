@@ -32,21 +32,20 @@ To check whether you can install WhatsAppBot in your Mac, do the following steps
 
 2. Then run the following function code snippet
 .. code:: python
-
    import pyautogui
    pyautogui.displayMousePosition()
 
 If you get an output similar to the one below, WhatsAppBot will work in your system.
 
-.. code::
+.. code::python
    Press Ctrl-C to quit.
    X:  0 Y: 1027 RGB: ( 108,  7,  3)
    
 But if you get an output similar to the one below, WhatsAppBot will not work in your system.
 
-.. code::
+.. code::python
    Press Ctrl-C to quit.
-   X:  0 Y: 1027 RGB: ( NaN,  Nan,  Nan)
+   X:  0 Y: 1027 RGB: ( NaN,  NaN,  NaN)
    
   
 Creating an instance using constructor
