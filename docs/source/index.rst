@@ -67,7 +67,7 @@ getNewMessages(self)
 
 Function description and working:
 
-It opens WhatsApp and turns on the unread chat filter. It then opens chats under the filter one by one untill there is nothing left. For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down. It then opens contact info (or group info) to copy information about the sender. It closes the contact info and selects messages. It copies it to the clipboard and parses it discard previously read messages and returns the new messages in the below format. After reading all messages it minimizes WhatsApp.
+It opens WhatsApp and turns on the unread chat filter. It then opens chats under the filter one by one untill there is nothing left. For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down. It then opens contact info (or group info) to copy information about the sender. It closes the contact info and selects messages. It copies it to the clipboard and parses it to discard previously read messages and returns the new messages in the below format. After reading all messages it minimizes WhatsApp.
 
 Usage:
 
@@ -164,7 +164,7 @@ Example:
    
    WTBot.sendMessage(personal_or_grp='Personal Chat', message_to='+91 99524 02150', message_type='Text', text='hello how are you')
    WTBot.sendMessage(personal_or_grp='Personal Chat', message_to='Nanda', message_type='Text', text='hello how are you')
-   WTBot.sendMessage(personal_or_grp='Group Chat', message_to='Group Name', message_type='Image', image=r'C:\Users\nanda\Downloads\dhoni.jpeg')
+   WTBot.sendMessage(personal_or_grp='Group Chat', message_to='Group Name', message_type='Image', image_location=r'C:\Users\nanda\Downloads\dhoni.jpeg')
    
 
 =============================
