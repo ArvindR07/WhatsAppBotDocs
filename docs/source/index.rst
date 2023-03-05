@@ -221,4 +221,119 @@ Example:
                      ]
 
 
+=============================
+getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
+=============================
+
+This function returns the previously sent and received messages as list sorted by the date-time of the message (earliest to latest) [start_date_time to end_date_time] . The arguments to the functions are various filters you can use.
+Note: You will only get messages that were read or sent by using the package. That means only the messages that were sent using WTBot.sendMessage() and read using WTBot.getNewMessages() will be available
+
+Usage:
+
+.. code:: python
+
+   getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
+
+Arguments:
+
+.. code:: python
+   
+   # count specifies the number of records to return in the list
+   # default parameter count = 100
+   
+   # It specifies whether message_to is a group chat or personal chat
+   # default parameter personal_or_grp = None
+   # If it is None, it returns both Personal and Group messages
+   personal_or_grp = 'Personal Chat' or 'Group Chat'
+   
+   # ph_no_or_name is a string
+   # default parameter ph_no_or_name = None
+   # If it is None, it does not filter based on name
+   if personal_or_grp is 'Personal Chat':
+      # ph_no_or_name can be contact name of the personal chat
+      # or phone number of the personal chat as string
+      
+      # contact name and phone number must be exactly same as it is in contact info of whatsapp
+      # '9952402150' -> wrong
+      # '+91 99524 02150' -> correct
+      # '6374681767' -> wrong
+      # '+91 6374 681 767' -> correct
+   else if personal_or_grp is 'Group Chat':
+      # ph_no_or_name is the name of group
+   
+   # message_type indicates whether you want to filter out only Image or Text messages or Both
+   # default parameter 'Both'
+   message_type = 'Text' or 'Image' or 'Both'
+   
+   # format - 'YYYY-MM-DD HH:MM'
+   # default parameters
+   start_date_time='1970-01-01 00:00', end_date_time='3000-01-01 00:00'
+   
+Example:
+
+.. code:: python
+   
+   WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
+   WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
+   WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
+
+Return Template:
+
+.. code:: python
+   
+   "Group Chat", msg_type = Received, group_name, date_time_string, user_name, phone_number, msg
+   "Group Chat", msg_type = Sent, group_name, date_time_string, msg
+   "Personal Chat", msg_type = Sent/Received, user_name, phone_number, date_time_string, msg
+
+
+
+Return Example:
+
+.. code:: python
+   
+   [
+   [],
+   [],
+   []
+   ]
+
+=============================
+changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
+=============================
+
+Function Description and Working:
+
+This is used to change the time delays of an already existing setup. All the 3 arguments have a default parameter as None, so you can change just one or two of them as you please. All 3 arguments take only float.
+
+Usage:
+
+.. code:: python
+
+   WTBot.changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
+
+Example:
+
+.. code:: python
+   
+   WTBot.changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
+   ..........
+     
+=============================
+resetWhatsappBot(self)
+=============================
+
+Function Description and Working:
+
+This function deletes all the previously read and sent messages. So once you call this, the getPreviousMessages() function returns empty list (untill ofcourse when new messages are read using getNewMessages(), and sent using sendMessage().
+Call this function when you want to discard old messages and start afresh.
+
+Usage:
+
+.. code:: python
+
+   WTBot.resetWhatsappBot()
+
+   
+
+
 
