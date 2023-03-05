@@ -26,11 +26,13 @@ Our package has a heavy dependency on pyAutoGUI, and in some Mac systems, few of
 To check whether you can install WhatsAppBot in your Mac, do the following steps.
 
 1. Install PyAutoGUI on your Mac using the below command
+
 .. code:: python
    
    python3 -m pip install pyautogui
 
 2. Then run the following function code snippet
+
 .. code:: python
    import pyautogui
    pyautogui.displayMousePosition()
