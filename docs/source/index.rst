@@ -5,6 +5,50 @@ Welcome to WhatsAppBot's documentation!
 
 .. default-role:: code
 
+Installation and Dependency
+=======================
+
+Installation in Windows:
+
+.. code:: python
+   
+   pip install WhatsAppBot-Nanda[win32]
+
+
+Installation in other Platforms:
+
+.. code:: python
+   
+   pip install WhatsAppBot-Nanda
+   
+Dependency for Mac:
+Our package has a heavy dependency on pyAutoGUI, and in some Mac systems, few of its functions does not work.
+To check whether you can install WhatsAppBot in your Mac, do the following steps.
+
+1. Install PyAutoGUI on your Mac using the below command
+.. code:: python
+   
+   python3 -m pip install pyautogui
+
+2. Then run the following function code snippet
+.. code:: python
+
+   import pyautogui
+   pyautogui.displayMousePosition()
+
+If you get an output similar to the one below, WhatsAppBot will work in your system.
+
+.. code::
+   Press Ctrl-C to quit.
+   X:  0 Y: 1027 RGB: ( 108,  7,  3)
+   
+But if you get an output similar to the one below, WhatsAppBot will not work in your system.
+
+.. code::
+   Press Ctrl-C to quit.
+   X:  0 Y: 1027 RGB: ( NaN,  Nan,  Nan)
+   
+  
 Creating an instance using constructor
 =======================
 
