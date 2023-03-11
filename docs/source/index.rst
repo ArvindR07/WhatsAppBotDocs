@@ -39,13 +39,15 @@ To check whether you can install WhatsAppBot in your Mac, do the following steps
 
 If you get an output similar to the one below, WhatsAppBot will work in your system.
 
-.. code::python
+.. code:: python
+
    Press Ctrl-C to quit.
    X:  0 Y: 1027 RGB: ( 108,  7,  3)
    
 But if you get an output similar to the one below, WhatsAppBot will not work in your system.
 
-.. code::python
+.. code:: python
+
    Press Ctrl-C to quit.
    X:  0 Y: 1027 RGB: ( NaN,  NaN,  NaN)
    
@@ -173,35 +175,31 @@ Usage:
 
 Arguments:
 
-.. code:: python
-   
-   # It specifies whether message_to is a group chat or personal chat
-   personal_or_grp = 'Personal Chat' or 'Group Chat' 
-   
-   # message_to is a string
-   if personal_or_grp is 'Personal Chat':
-      # message_to can be contact name of the personal chat
-      # or phone number of the personal chat as string
+1. personal_or_grp:
+      Objective: Specify the type of message
       
-      # contact name and phone number must be exactly same as it is in contact info of whatsapp
-      # '9952402150' -> wrong
-      # '+91 99524 02150' -> correct
-      # '6374681767' -> wrong
-      # '+91 6374 681 767' -> correct
-   else if personal_or_grp is 'Group Chat':
-      # message_to is the name of group
-   
-   # message_type indicates whether type of message to send is either Image or Text
-   message_type = 'Text' or 'Image'
-   
-   if message_type = 'Text':
-      # text argument contains the text to send as string
-   else if message_type = 'Image':
-      # Image argument contains the path to image loaction as string
+      Values: "Personal Chat", "Group Chat"
+2. message_to:
+      Objective: To whom the message is being sent to
       
-      # Windows supports all types of image format
-      # In Mac, you can only send images in jpeg format
-      # In other platforms, sending image is not possible, while you can still send text messages
+      Values: Phone Number (or) Contact Name, (Type: String)
+              '6374680762'       -> wrong
+              
+              '+91 6374 680 762' -> correct
+3. message_type:
+      Objective: Specify the type of message
+      
+      Values: "Text", "Image"
+4. text:
+      Objective: The text String that needs to be sent, (message_type should be set as "Text")
+      
+      Values: The message in String format
+5. image_location:
+      Objective: The path to the image that needs to be sent, (message_type should be set as "Image")
+      
+      Values: The path to the image in String format
+               
+               (While Windows supports all image formats, Mac only supports .jpeg)
    
 Example:
 
@@ -281,38 +279,33 @@ Usage:
 
 Arguments:
 
-.. code:: python
-   
-   # count specifies the number of records to return in the list
-   # default parameter count = 100
-   
-   # It specifies whether message_to is a group chat or personal chat
-   # default parameter personal_or_grp = None
-   # If it is None, it returns both Personal and Group messages
-   personal_or_grp = 'Personal Chat' or 'Group Chat'
-   
-   # ph_no_or_name is a string
-   # default parameter ph_no_or_name = None
-   # If it is None, it does not filter based on name
-   if personal_or_grp is 'Personal Chat':
-      # ph_no_or_name can be contact name of the personal chat
-      # or phone number of the personal chat as string
+1. count:
+      Objective: Specifies the number of records to be returned
       
-      # contact name and phone number must be exactly same as it is in contact info of whatsapp
-      # '9952402150' -> wrong
-      # '+91 99524 02150' -> correct
-      # '6374681767' -> wrong
-      # '+91 6374 681 767' -> correct
-   else if personal_or_grp is 'Group Chat':
-      # ph_no_or_name is the name of group
-   
-   # message_type indicates whether you want to filter out only Image or Text messages or Both
-   # default parameter 'Both'
-   message_type = 'Text' or 'Image' or 'Both'
-   
-   # format - 'YYYY-MM-DD HH:MM'
-   # default parameters
-   start_date_time='1970-01-01 00:00', end_date_time='3000-01-01 00:00'
+      Values: Integer value, default: 100
+2. personal_or_grp:
+      Objective: Specify the type of message to be returned
+      
+      Values: "Personal Chat", "Group Chat", default: None -> both types
+3. ph_no_or_name:
+      Objective: To whom the message is being sent to
+      
+      Values: Phone Number (or) Contact Name, (Type: String), default: 'Both'
+              '6374680762'       -> wrong
+              
+              '+91 6374 680 762' -> correct
+4. message_type:
+      Objective: Specify the type of message
+      
+      Values: "Text", "Image", default: 'Both'
+5. start_date_time:
+      Objective: Specify start date
+      
+      Values: Date in 'YYYY-MM-DD HH:MM' format, default: '1970-01-01 00:00'
+6. end_date_time:
+      Objective: Specify end date
+      
+      Values: Date in 'YYYY-MM-DD HH:MM' format, default: '3000-01-01 00:00'
    
 Example:
 
