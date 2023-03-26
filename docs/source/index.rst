@@ -8,20 +8,20 @@ Welcome to WhatsAppBot's documentation!
 Installation and Dependency
 =======================
 
-Installation in Windows:
+**Installation in Windows:**
 
 .. code:: python
    
    pip install WhatsAppBot-Nanda[win32]
 
 
-Installation in other Platforms:
+**Installation in other Platforms:**
 
 .. code:: python
    
    pip install WhatsAppBot-Nanda
    
-Dependency for Mac:
+*Dependency for Mac:*
 Our package has a heavy dependency on pyAutoGUI, and in some Mac systems, few of its functions does not work.
 To check whether you can install WhatsAppBot in your Mac, do the following steps.
 
@@ -34,6 +34,7 @@ To check whether you can install WhatsAppBot in your Mac, do the following steps
 2. Then run the following function code snippet
 
 .. code:: python
+
    import pyautogui
    pyautogui.displayMousePosition()
 
@@ -80,24 +81,26 @@ After setting up, use the setup name you entered during the setup process to cre
 Functions
 =======================
 
+You can also watch `this <https://www.youtube.com/>`_ video to understand how to use these functions.
+
 =============================
 newMessagesThere(self)
 =============================
 
-Function Description and Working:
+**Function Description and Working:**
 
-This Functions returns a boolean value (True or False).
-If there are new messages (unread messages), it returns True, otherwise False.
-It uses the red color notification dot on WhatsApp icon to acheive this.
-So this function is available only for WhatsApp Desktop Application in Windows and Mac, and not for WhatsApp Web.
+| This Functions returns a boolean value (True or False).
+| If there are new messages (unread messages), it returns True, otherwise False.
+| It uses the red color notification dot on WhatsApp icon to acheive this.
+| So this function is available only for WhatsApp Desktop Application in Windows and Mac, and not for WhatsApp Web.
 
-Usage:
+**Usage:**
 
 .. code:: python
 
    WTBot.newMessagesThere()
 
-Returns:
+**Returns:**
 
 .. code:: python
    
@@ -112,17 +115,17 @@ Returns:
 getNewMessages(self)
 =============================
 
-Function description and working:
+**Function description and working:**
 
 It opens WhatsApp and turns on the unread chat filter. It then opens chats under the filter one by one untill there is nothing left. For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down. It then opens contact info (or group info) to copy information about the sender. It closes the contact info and selects messages. It copies it to the clipboard and parses it to discard previously read messages and returns the new messages in the below format. After reading all messages it minimizes WhatsApp.
 
-Usage:
+**Usage:**
 
 .. code:: python
 
    WTBot.getNewMessages()
 
-Return Template:
+**Return Template:**
 
 .. code:: python
    
@@ -138,7 +141,7 @@ Must make it clear it is list of messages, give example.
 Above it template.
 Order may be different, check...
 
-Return Example:
+**Return Example:**
 
 .. code:: python
    
@@ -167,13 +170,13 @@ sendMessage(self, personal_or_grp, message_to, message_type, text, image_locatio
 
 This function opens WhatsApp, searches **message_to** and opens it. It it then sends text or image as specified.
 
-Usage:
+**Usage:**
 
 .. code:: python
 
    WTBot.sendMessage(personal_or_grp, message_to, message_type, text, image_location)
 
-Arguments:
+**Arguments:**
 
 1. personal_or_grp:
       Objective: Specify the type of message
@@ -183,6 +186,7 @@ Arguments:
       Objective: To whom the message is being sent to
       
       Values: Phone Number (or) Contact Name, (Type: String)
+              
               '6374680762'       -> wrong
               
               '+91 6374 680 762' -> correct
@@ -201,7 +205,7 @@ Arguments:
                
                (While Windows supports all image formats, Mac only supports .jpeg)
    
-Example:
+**Example:**
 
 .. code:: python
    
@@ -216,13 +220,13 @@ sendMultipleMessages(self, list_of_replies):
 
 This function does the same as functionality as sendMessage, but is highly optimised when sending multiple messages. You can buffer the send operations, and give it to this function as a list.
 
-Usage:
+**Usage:**
 
 .. code:: python
 
    WTBot.sendMultipleMessages(list_of_replies)
 
-Arguments:
+**Arguments:**
 
 .. code:: python
    
@@ -245,7 +249,7 @@ Arguments:
                         ...
                      ]
    
-Example:
+**Example:**
 
 .. code:: python
    
@@ -271,13 +275,13 @@ getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_d
 This function returns the previously sent and received messages as list sorted by the date-time of the message (earliest to latest) [start_date_time to end_date_time] . The arguments to the functions are various filters you can use.
 Note: You will only get messages that were read or sent by using the package. That means only the messages that were sent using WTBot.sendMessage() and read using WTBot.getNewMessages() will be available
 
-Usage:
+**Usage:**
 
 .. code:: python
 
    getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
 
-Arguments:
+**Arguments:**
 
 1. count:
       Objective: Specifies the number of records to be returned
@@ -286,11 +290,14 @@ Arguments:
 2. personal_or_grp:
       Objective: Specify the type of message to be returned
       
-      Values: "Personal Chat", "Group Chat", default: None -> both types
+      Values: "Personal Chat", "Group Chat"
+         
+         default: None -> both types
 3. ph_no_or_name:
       Objective: To whom the message is being sent to
       
       Values: Phone Number (or) Contact Name, (Type: String), default: 'Both'
+             
               '6374680762'       -> wrong
               
               '+91 6374 680 762' -> correct
@@ -301,13 +308,13 @@ Arguments:
 5. start_date_time:
       Objective: Specify start date
       
-      Values: Date in 'YYYY-MM-DD HH:MM' format, default: '1970-01-01 00:00'
+      Values: Date in 'YYYY-MM-DD HH:MM' format default: '1970-01-01 00:00'
 6. end_date_time:
       Objective: Specify end date
       
       Values: Date in 'YYYY-MM-DD HH:MM' format, default: '3000-01-01 00:00'
    
-Example:
+**Example:**
 
 .. code:: python
    
@@ -315,7 +322,7 @@ Example:
    WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
    WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
 
-Return Template:
+**Return Template:**
 
 .. code:: python
    
@@ -325,7 +332,7 @@ Return Template:
 
 
 
-Return Example:
+**Return Example:**
 
 .. code:: python
    
@@ -339,17 +346,17 @@ Return Example:
 changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
 =============================
 
-Function Description and Working:
+**Function Description and Working:**
 
 This is used to change the time delays of an already existing setup. All the 3 arguments have a default parameter as None, so you can change just one or two of them as you please. All 3 arguments take only float.
 
-Usage:
+**Usage:**
 
 .. code:: python
 
    WTBot.changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
 
-Example:
+**Example:**
 
 .. code:: python
    
@@ -360,12 +367,12 @@ Example:
 resetWhatsappBot(self)
 =============================
 
-Function Description and Working:
+**Function Description and Working:**
 
 This function deletes all the previously read and sent messages. So once you call this, the getPreviousMessages() function returns empty list (untill ofcourse when new messages are read using getNewMessages(), and sent using sendMessage().
 Call this function when you want to discard old messages and start afresh.
 
-Usage:
+**Usage:**
 
 .. code:: python
 
