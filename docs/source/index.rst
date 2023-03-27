@@ -145,9 +145,7 @@ getNewMessages(self)
    ]
 
 It returns a list of new messages clubbed together with the chat.
-Must make it clear it is list of messages, give example. 
-Above it template.
-Order may be different, check...
+
 
 **Return Example:**
 
