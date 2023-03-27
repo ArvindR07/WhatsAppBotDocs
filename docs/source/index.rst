@@ -174,7 +174,7 @@ It returns a list of new messages clubbed together with the chat.
 sendMessage(self, personal_or_grp, message_to, message_type, text, image_location)
 =============================
 
-This function opens WhatsApp, searches **message_to** and opens it. It it then sends text or image as specified.
+This function opens WhatsApp, searches the name of contact or group to whom the message is to be sent and opens it. It then sends text or image as specified.
 
 **Usage:**
 
