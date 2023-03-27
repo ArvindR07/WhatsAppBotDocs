@@ -93,7 +93,7 @@ newMessagesThere(self)
 | If there are new messages (unread messages), it returns True, otherwise False.
 | It uses the red color notification dot on WhatsApp icon to acheive this.
 | This function is available only for WhatsApp Desktop Application in Windows and Mac, and not for WhatsApp Web.
-
+| 
 
 **Usage:**
 
