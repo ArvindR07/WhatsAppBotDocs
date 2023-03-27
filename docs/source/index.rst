@@ -94,6 +94,7 @@ newMessagesThere(self)
 | It uses the red color notification dot on WhatsApp icon to acheive this.
 | This function is available only for WhatsApp Desktop Application in Windows and Mac, and not for WhatsApp Web.
 
+
 **Usage:**
 
 .. code:: python
