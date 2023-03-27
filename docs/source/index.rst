@@ -81,7 +81,7 @@ After setting up, use the setup name you entered during the setup process to cre
 Functions
 =======================
 
-You can also watch `this <https://www.youtube.com/>`_ video to understand how to use these functions.
+You can also watch `this <https://www.youtube.com/>`_ video to understand how to use the functions of WhatsAppBot given below.
 
 =============================
 newMessagesThere(self)
