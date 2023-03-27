@@ -2,6 +2,7 @@ Welcome to WhatsAppBot's documentation!
 ========================================
 
 **WhatsAppBot** is a Python package to automate the process of reading and replying to WhatsApp messages. It uses PyAutoGUI for performing keyboard and mouse events, using which messages are selected, copied and typed.
+Watch `this <https://www.youtube.com/>`_ 2 minute animated video on WhatsAppBot. 
 
 .. default-role:: code
 
@@ -185,11 +186,11 @@ This function opens WhatsApp, searches the name of contact or group to whom the 
 **Arguments:**
 
 1. personal_or_grp:
-      Objective: Specify the type of message
+      Objective: Specify the type of chat
       
       Values: "Personal Chat", "Group Chat"
 2. message_to:
-      Objective: To whom the message is being sent to
+      Objective: To whom the message is being sent to. If it "Personal Chat", then it can be a string representing the full name of the contact as saved, or phone number in the same format as in WhatsApp, and if it is "Group Chat" the full name of the group (case sensitive)
       
       Values: Phone Number (or) Contact Name, (Type: String)
               
@@ -201,7 +202,7 @@ This function opens WhatsApp, searches the name of contact or group to whom the 
       
       Values: "Text", "Image"
 4. text:
-      Objective: The text String that needs to be sent, (message_type should be set as "Text")
+      Objective: The text that needs to be sent, (message_type should be set as "Text")
       
       Values: The message in String format
 5. image_location:
@@ -209,7 +210,7 @@ This function opens WhatsApp, searches the name of contact or group to whom the 
       
       Values: The path to the image in String format
                
-               (While Windows supports all image formats, Mac only supports .jpeg)
+      Note: (Windows supports all image formats, Mac only supports .jpeg)
    
 **Example:**
 
@@ -266,6 +267,11 @@ This function does the same as functionality as sendMessage, but is highly optim
                                                             ['Text','Hello']
                                                            ]
                         ],
+                        ['Personal Chat','Nanda',[
+                                                            ['Text','Hi'],
+                                                            ['Text','Hello']
+                                                           ]
+                        ],
                         ['Group Chat','Sample Group 1',[
                                                          ['Image','C:\\Users\\nanda\\Downloads\\dhoni.jpeg'],
                                                          ['Text','How is it?']
@@ -290,35 +296,40 @@ Note: You will only get messages that were read or sent by using the package. Th
 **Arguments:**
 
 1. count:
-      Objective: Specifies the number of records to be returned
+      Objective: maximum number of records to be returned
       
-      Values: Integer value, default: 100
+      Values: Integer value
+      
+      Default: 100
+      
 2. personal_or_grp:
-      Objective: Specify the type of message to be returned
+      Objective: Filter only Personal Chat messages or Group Chat messages or return Both
       
       Values: "Personal Chat", "Group Chat"
          
-         default: None -> both types
+      Default: None ->  meaning no filter is applied and both types are returned
 3. ph_no_or_name:
-      Objective: To whom the message is being sent to
+      Objective: Filter based on Phone Number or Contact Name if it is "Personal Chat" or with Group name if it is "Group Chat"
       
-      Values: Phone Number (or) Contact Name, (Type: String), default: 'Both'
+      Values: Phone Number (or) Contact Name, (Type: String), or Group Name
              
-              '6374680762'       -> wrong
-              
-              '+91 6374 680 762' -> correct
+      Default: None -> meaning no filter is applied
 4. message_type:
       Objective: Specify the type of message
       
-      Values: "Text", "Image", default: 'Both'
+      Values: "Text", "Image"
+      
+      Default: "Both"
 5. start_date_time:
       Objective: Specify start date
       
-      Values: Date in 'YYYY-MM-DD HH:MM' format default: '1970-01-01 00:00'
+      Values: Date in 'YYYY-MM-DD HH:MM' format 
+      Default: '1970-01-01 00:00'
 6. end_date_time:
       Objective: Specify end date
       
-      Values: Date in 'YYYY-MM-DD HH:MM' format, default: '3000-01-01 00:00'
+      Values: Date in 'YYYY-MM-DD HH:MM' format
+      Default: '3000-01-01 00:00'
    
 **Example:**
 
@@ -366,7 +377,9 @@ This is used to change the time delays of an already existing setup. All the 3 a
 
 .. code:: python
    
-   WTBot.changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
+   WTBot.changeTimeDelays(waiting_time_delay=0.5, mouse_delay=0.5, typing_delay=0.01)
+   WTBot.changeTimeDelays(waiting_time_delay=0.75, typing_delay=0.01)
+   WTBot.changeTimeDelays(typing_delay=0.1)
    ..........
      
 =============================
