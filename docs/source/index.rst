@@ -56,7 +56,7 @@ But if you get an output similar to the one below, WhatsAppBot will not work in 
 Creating an instance using constructor
 =======================
 
-To create a new setup, run the below script.
+To create a new setup, run the script given below.
 
 .. code:: python
    
