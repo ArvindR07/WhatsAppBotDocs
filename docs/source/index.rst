@@ -74,16 +74,15 @@ You just have to setup once and the entire setup process takes only about 5 to 1
 .. image:: setup.png
    :width: 600
 
-After setting up, use the setup name you entered during the setup process to create an instance.
+| One thing you will be asked to do in the setup process is to create an empty group with some name.
+| This will serve as a default group. The use of this group is explained later in this documentation.
+| After setting up, use the setup name you entered during the setup process to create an instance.
 
 .. code:: python
    
    from WhatsAppBot import *
    
    WTBot = WhatsAppBot('setup name you entered')
-
-| One thing you will be asked to do in the setup process is to create an empty group with some name.
-| This will serve as a default group. The use of this group is explained later in this documentation.
 
 | When creating an instance of WhatsAppBot by running the above code snippet, WhatsApp in your system is opened.
 | It then goes into the default group and minimises WhatsApp. Again the purpose of this is explained later.
