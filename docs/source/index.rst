@@ -207,7 +207,7 @@ It returns a list of new messages clubbed together with the chat.
 sendMessage(self, personal_or_grp, message_to, message_type, text, image_location)
 =============================
 
-This function opens WhatsApp, searches the name of contact or group to whom the message is to be sent and opens it. It then sends text or image as specified. If there is no such contact or group, it does not send anything.
+This function opens WhatsApp, searches the name of contact or group to whom the message is to be sent and opens it. It then sends text or image as specified. If there is no such contact or group, it does not send anything. Then in the end it goes into the default group and minimises WhatsApp.
 
 **Usage:**
 
@@ -257,7 +257,13 @@ This function opens WhatsApp, searches the name of contact or group to whom the 
 sendMultipleMessages(self, list_of_replies):
 =============================
 
-This function does the same as functionality as sendMessage, but is highly optimised when sending multiple messages. You can buffer the send operations, and give it to this function as a list.
+| This function does the same functionality as sendMessage, but is highly optimised when sending multiple messages.
+| You can buffer the send operations, and give it to this function as a list in the below given format. Use this if you want to send multiple messages.
+| It is faster as it does not go into the default group after each send operation
+| Assume you want to send 10 messages. If you use sendMessage, for each operation, WhatsApp will be opened, the chat to which message is to be sent will be opened, message will be sent, default group will be opened and WhatsApp will be closed.
+| But if you use sendMultipleMessages, WhatsApp will be opened, all the send operations will be done and at the end only, default group will be opened and WhatsApp will be minimised.
+| So for 10 messages, we can save time for (opening WhatsApp, going to default group, minimizing WhatsApp) x 9 times.
+
 
 **Usage:**
 
