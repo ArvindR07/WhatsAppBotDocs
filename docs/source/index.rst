@@ -126,7 +126,7 @@ getNewMessages(self)
 | It then opens chats under the filter one by one untill there is nothing left.
 | For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down.
 | It then opens contact info (or group info) to copy information about the sender.
-| It closes the contact info and selects messages.
+| After that it closes the contact info and drags and selects messages.
 | It copies it to the clipboard and parses it to discard previously read messages and returns the new messages in the below format.
 | After reading all messages it minimizes WhatsApp.
 | 
