@@ -195,7 +195,7 @@ This function opens WhatsApp, searches the name of contact or group to whom the 
 2. message_to:
       Objective: To whom the message is being sent to. If it "Personal Chat", then it can be a string representing the full name of the contact as saved, or phone number in the same format as in WhatsApp, and if it is "Group Chat" the full name of the group (case sensitive)
       
-      Values: Phone Number (or) Contact Name, (Type: String)
+      Values: Phone Number (or) Contact Name/ Group Name (Type: String)
               
               '6374680762'       -> wrong
               
