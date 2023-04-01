@@ -57,7 +57,7 @@ But if you get an output similar to the one below, WhatsAppBot will not work in 
 Creating an instance using constructor
 =======================
 
-| WhatsAppBot is a Robotic process automation package that imitates human behaviour with WhatsApp Application in PC/Desktop, it needs few coordinates of your system, to perform the operations. 
+| WhatsAppBot is a Robotic process automation package that imitates human behaviour with WhatsApp Application in PC/Desktop, and it needs few coordinates of your system, to perform the operations. 
 | For example, to send a new message, the package needs to know where the type message box coordinated are located as well as the send button.
 | To create a new setup, run the script given below. It will open a setup box (Installer) with neat User Interface that will guide you with the necessary steps. 
 
