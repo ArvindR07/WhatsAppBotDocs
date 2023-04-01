@@ -132,9 +132,28 @@ getNewMessages(self)
 | For each chat, it first scrolls down till the end of chat, while intelligently noting how much it has scrolled down.
 | It then opens contact info (or group info) to copy information about the sender.
 | After that it closes the contact info and drags and selects messages.
-| It copies it to the clipboard and parses it to discard previously read messages and returns the new messages in the below format.
-| After reading all messages it minimizes WhatsApp.
-| 
+| It copies it to the clipboard and parses it to discard previously read messages and returns the new messages in the format given below in this documentation.
+| The logic for discarding old messages that are copied is taken care and you only get new messages.
+| In the internal implementation, this is done by storing the old messages in your system.
+| After reading all messages it goes into the default group and minimizes WhatsApp.
+
+**Reason for having Default Group:**
+| The reason for going inside default group is, to go into the chat that has new messages, we need it to be unread.
+| So when unread chat filter is turned on, we can go into the chat and copy new messages.
+| If this is not done, we may miss new messages.
+
+**Scenario Explained using Example:**
+| Assume we get a new message from CHAT A. 
+| When getNewMessages() function is called, WhatsApp is opened and after turning on unread chat filter we go into CHAT A and new messages are copied.
+| Assume we don't go into default group and we minimise WhatsApp.
+
+| Now after some time, new message has come from CHAT A.
+| If we call getNewMessages(), when WhatsApp is opened, we will be inside CHAT A, and we would have read new messages from CHAT A.
+| So when unread chat filter is turned on, we won't have CHAT A, as it would have been read.
+| This means we lose the message.
+| That's why we go inside the default group in the end.
+| This is the same reason why when creating an instance of WhatsAppBot, we go inside default group
+
 
 **Usage:**
 
