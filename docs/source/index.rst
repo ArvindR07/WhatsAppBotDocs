@@ -136,12 +136,14 @@ getNewMessages(self)
 | The logic for discarding old messages that are copied is taken care and you only get new messages.
 | In the internal implementation, this is done by storing the old messages in your system.
 | After reading all messages it goes into the default group and minimizes WhatsApp.
+|
 
 **Reason for having Default Group:**
 
 | The reason for going inside default group is, to go into the chat that has new messages, we need it to be unread.
 | So when unread chat filter is turned on, we can go into the chat and copy new messages.
 | If this is not done, we may miss new messages.
+|
 
 **Scenario Explained using Example:**
 
@@ -155,6 +157,7 @@ getNewMessages(self)
 | This means we lose the message.
 | That's why we go inside the default group in the end.
 | This is the same reason why when creating an instance of WhatsAppBot, we go inside default group
+|
 
 
 **Usage:**
