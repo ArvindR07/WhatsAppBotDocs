@@ -57,7 +57,9 @@ But if you get an output similar to the one below, WhatsAppBot will not work in 
 Creating an instance using constructor
 =======================
 
-To create a new setup, run the script given below.
+| WhatsAppBot is a Robotic process automation package that imitates human behaviour with WhatsApp Application in PC/Desktop, it needs few coordinates of your system, to perform the operations. 
+| For example, to send a new message, the package needs to know where the type message box coordinated are located as well as the send button.
+| To create a new setup, run the script given below. It will open a setup box (Installer) with neat User Interface that will guide you with the necessary steps. 
 
 .. code:: python
    
@@ -65,8 +67,9 @@ To create a new setup, run the script given below.
    
    WTBot = WhatsAppBot('create a new setup')
 
-An installer will appear which will guide you through the setup process. 
-It is **highly recommended** to watch `this <https://www.youtube.com/>`_ video on how to setup. 
+ 
+It is **highly recommended** to watch `this <https://www.youtube.com/>`_ video on how to setup.
+You just have to setup once and the entire setup process takes only about 5 to 10 minutes
 
 .. image:: setup.png
    :width: 600
@@ -82,7 +85,7 @@ After setting up, use the setup name you entered during the setup process to cre
 Functions
 =======================
 
-You can also watch `this <https://www.youtube.com/>`_ video to understand how to use the functions of WhatsAppBot given below.
+Watch `this <https://www.youtube.com/>`_  15 minute video that gives a demo on how to use all the functions of WhatsAppBot given below.
 
 =============================
 newMessagesThere(self)
