@@ -138,11 +138,13 @@ getNewMessages(self)
 | After reading all messages it goes into the default group and minimizes WhatsApp.
 
 **Reason for having Default Group:**
+
 | The reason for going inside default group is, to go into the chat that has new messages, we need it to be unread.
 | So when unread chat filter is turned on, we can go into the chat and copy new messages.
 | If this is not done, we may miss new messages.
 
 **Scenario Explained using Example:**
+
 | Assume we get a new message from CHAT A. 
 | When getNewMessages() function is called, WhatsApp is opened and after turning on unread chat filter we go into CHAT A and new messages are copied.
 | Assume we don't go into default group and we minimise WhatsApp.
