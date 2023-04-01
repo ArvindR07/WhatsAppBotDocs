@@ -85,7 +85,7 @@ You just have to setup once and the entire setup process takes only about 5 to 1
    WTBot = WhatsAppBot('setup name you entered')
 
 | When creating an instance of WhatsAppBot by running the above code snippet, WhatsApp in your system is opened.
-| It then goes into the default group and minimises WhatsApp. Again the purpose of this is explained later.
+| It then goes into the chat of default group and minimises WhatsApp. Again the purpose of this is explained later.
 
 Functions
 =======================
