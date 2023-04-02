@@ -365,7 +365,7 @@ Note: You will only get messages that were read or sent by using the package. Th
 4. message_type:
       Objective: Specify the type of message
       
-      Values: "Text", "Image"
+      Values: "Sent", "Received"
       
       Default: "Both"
 5. start_date_time:
@@ -383,20 +383,23 @@ Note: You will only get messages that were read or sent by using the package. Th
 
 .. code:: python
    
-   WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
-   WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
-   WTBot.getPreviousMessages(count, personal_or_grp, ph_no_or_name, message_type, start_date_time, end_date_time)
+   # limit 1000 messages, from Old Friends group in the specified date time range, that includes both sent and received messages
+   WTBot.getPreviousMessages(count=1000, personal_or_grp='Group Chat', ph_no_or_name='Old Friends', message_type='Both', start_date_time='2023-04-01 00:00', end_date_time='2023-05-01 00:00')
+   # get the last 20 messages sent by you. It can be from any chat
+   WTBot.getPreviousMessages(count=20, message_type='Sent')
+   # get the last 100 messages from Personal Chat of given phone number
+   WTBot.getPreviousMessages(personal_or_grp ='Personal Chat', ph_no_or_name='+91 99524 02150')
 
 **Return Template:**
 
 .. code:: python
    
    # If a message was received from Group, it will have group name along with the username and phone number of the sender, date time and the actual message
-   "Group Chat", msg_type = Received, group_name, date_time_string, user_name, phone_number, msg
+   ["Group Chat", msg_type = Received, group_name, date_time_string, user_name, phone_number, msg]
    # If a message was sent by you to Group, it is common for everyone in the group, and will not have username and phone number
-   "Group Chat", msg_type = Sent, group_name, date_time_string, msg
+   ["Group Chat", msg_type = Sent, group_name, date_time_string, msg]
    # For messages in Personal Chat, the order of returned parameters is same for both sent and received
-   "Personal Chat", msg_type = Sent/Received, user_name, phone_number, date_time_string, msg
+   ["Personal Chat", msg_type = Sent/Received, user_name, phone_number, date_time_string, msg]
 
 
 
