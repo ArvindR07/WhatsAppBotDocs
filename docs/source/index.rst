@@ -379,7 +379,7 @@ Note: You will only get messages that were read or sent by using the package. Th
       Values: Date in 'YYYY-MM-DD HH:MM' format
       Default: '3000-01-01 00:00'
    
-**Example:**
+**Example Usage with various filters:**
 
 .. code:: python
    
@@ -391,12 +391,16 @@ Note: You will only get messages that were read or sent by using the package. Th
 
 .. code:: python
    
+   # If a message was received from Group, it will have group name along with the username and phone number of the sender, date time and the actual message
    "Group Chat", msg_type = Received, group_name, date_time_string, user_name, phone_number, msg
+   # If a message was sent by you to Group, it is common for everyone in the group, and will not have username and phone number
    "Group Chat", msg_type = Sent, group_name, date_time_string, msg
+   # For messages in Personal Chat, the order of returned parameters is same for both sent and received
    "Personal Chat", msg_type = Sent/Received, user_name, phone_number, date_time_string, msg
 
 
 
+Each and every message is a seperate list and not grouped as in getNewMessages 
 **Return Example:**
 
 .. code:: python
