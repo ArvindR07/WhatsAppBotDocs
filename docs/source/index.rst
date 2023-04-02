@@ -477,5 +477,46 @@ Call this function when you want to discard old messages and start afresh.
 
    
 
+=============================
+Template code you can edit
+=============================
+
+.. code:: python
+
+    from WhatsAppBot import *
+    WTBot = WhatsAppBot('setup_name')
+
+    while True:
+        if WTBot.newMessagesThere():
+            new_msgs = WTBot.getNewMessages()
+            for contact in new_msgs:
+                personal_or_grp = contact[0]
+                if personal_or_grp == 'Personal Chat':
+                    user_name = contact[1]
+                    ph_no = contact[2]
+                    msgs = contact[3]
+                    for msg in msgs:
+                        date_time = msg[0]
+                        actual_text_msg = msg[1]
+                        # use your own processing logic for generating reply
+                        # you can even use getPreviousMessages with filters if your algorithm needs context of the conversation
+
+                        # sendMessage or buffer reply to use sendMultipleMessages later
+                elif personal_or_grp == 'Group Chat':
+                    grp_name = contact[1]
+                    msgs = contact[2]
+                    for msg in msgs:
+                        date_time = msg[0]
+                        ph_no = msg[1]
+                        user_name = msg[2]
+                        actual_text_msg = msg[3]
+                        # use your own processing logic for generating reply
+                        # you can even use getPreviousMessages with filters if your algorithm needs context of the conversation
+
+                        # sendMessage or buffer reply to use sendMultipleMessages later
+
+            # if u buffered replies, use sendMultipleMessages here
+
+
 
 
