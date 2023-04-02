@@ -177,7 +177,17 @@ getNewMessages(self)
       ...
    ]
 
-It returns a list of new messages clubbed together with the chat.
+| It returns a list of new messages clubbed together with the chat.
+| Notice how new messages are clubbed differently for Personal Chat and Group Chat
+| For new messages from Group, when someone new messages (WhatsAppBot has not seen), it goes into their contact info to copy their username.
+| So it kind of a cold start problem. After sometime, WhatsAppBot would have seen all users, so it will be even faster.
+| It might be possible, where you get a message from someone in group, whose contact is not saved.
+| If this is the case, WhatsAppBot won't be able to open their chat to copy their username.
+| In that case you get their phone number, but the username field is an empty string ''.
+| This the reason, for new messages from group, phone_number is given precedence over user_name in the order.
+| But for Personal Chat, username is having precedence over phone_number.
+| It is just the order in which it is returned in the list.
+|
 
 
 **Return Example:**
