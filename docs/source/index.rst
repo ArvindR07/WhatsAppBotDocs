@@ -68,7 +68,7 @@ Creating an instance using constructor
    WTBot = WhatsAppBot('create a new setup')
 
  
-It is **highly recommended** to watch `this <https://www.youtube.com/>`_ video on how to setup.
+It is **highly recommended** to watch `this <https://youtu.be/ECvUxjK2rNE>`_ video on how to setup.
 You just have to setup once and the entire setup process takes only about 5 to 10 minutes
 
 .. image:: setup.png
