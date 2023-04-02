@@ -171,7 +171,7 @@ getNewMessages(self)
 .. code:: python
    
    [
-      ["Group Chat", group_name, [date_time_string, user_name, phone_number, msg]],
+      ["Group Chat", group_name, [date_time_string, phone_number, user_name, msg]],
       ["Personal Chat", user_name, phone_number, [date_time_string, msg]],
       ...,
       ...
@@ -187,9 +187,9 @@ It returns a list of new messages clubbed together with the chat.
    [
       ["Group Chat", 'Sample Group 1', 
          [
-            ['2023-01-01 15:30', 'nanda', '+91 99524 02150', 'Hi I am Nanda'],
-            ['2023-01-01 15:31', 'niresh', '+91 99524 02623', 'Hi I am Niresh'],
-            ['2023-01-01 15:34', 'nanda', '+91 99524 02150', 'Good Morning']
+            ['2023-01-01 15:30', '+91 99524 02150', 'nanda', 'Hi I am Nanda'],
+            ['2023-01-01 15:31', '+91 99524 02623', 'niresh', 'Hi I am Niresh'],
+            ['2023-01-01 15:34', '+91 99524 02150', 'nanda', 'How are you Niresh?']
          ]
       ],
       ["Personal Chat", 'nanda', '+91 99524 02150', 
