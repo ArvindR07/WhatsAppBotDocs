@@ -401,6 +401,7 @@ Note: You will only get messages that were read or sent by using the package. Th
 
 
 Each and every message is a seperate list and not grouped as in getNewMessages 
+
 **Return Example:**
 
 .. code:: python
