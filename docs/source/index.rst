@@ -90,7 +90,7 @@ You just have to setup once and the entire setup process takes only about 5 to 1
 Functions
 =======================
 
-Watch `this <https://www.youtube.com/>`_  15 minute video that gives a demo on how to use all the functions of WhatsAppBot given below.
+Watch `this <https://youtu.be/1HvoTEoiLuk>`_  15 minute video that gives a demo on how to use all the functions of WhatsAppBot given below.
 
 =============================
 newMessagesThere(self)
