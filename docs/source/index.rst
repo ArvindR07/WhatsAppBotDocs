@@ -409,11 +409,32 @@ Each and every message is a seperate list and not grouped as in getNewMessages
 
 .. code:: python
    
-   [
-   [],
-   [],
-   []
-   ]
+    [
+        [
+            'Personal Chat',
+            'Sent',
+            'Bagavathi Sivakumar',
+            '+91 99524 02623',
+            '2023-02-13 14:21',
+            'Sent image at location:C:\\Users\\susis\\Downloads\\nanda.jpg'
+        ],
+        [
+            'Personal Chat',
+            'Received',
+            'Suraj Sp Cs Academy',
+            '+91 6382 635 097',
+            '2023-03-01 21:14',
+            'Hi'
+        ],
+        [
+            'Group Chat',
+            'Received',
+            'Friends',
+            '2023-04-14 11:14',
+            'Niresh',
+            '+91 90037 77293',
+            'Hello everyone']
+    ]
 
 =============================
 changeTimeDelays(waiting_time_delay, mouse_delay, typing_delay)
